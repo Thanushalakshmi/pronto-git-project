@@ -3,7 +3,7 @@ import datetime
 
 
 
-def main(git_dir):
+def output_git_params(git_dir):
     repo = Repo(git_dir)
 
     # Get the active branch
@@ -27,5 +27,8 @@ def main(git_dir):
 
 
 if __name__ == "__main__":
-    git_items =('/Users/thanusha/code/pronto-git-project')
-    main(git_items)
+    while True:
+        user_input = input("Enter repo path or 'exit' to exit the program:")
+        if user_input == 'exit':
+            break
+        output_git_params(user_input)
