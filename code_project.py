@@ -11,8 +11,8 @@ def output_git_params(git_dir):
     print("active branch:",active_branch)
 
     # Check if repository files have been modified
-    changes= repo.is_dirty()
-    print("local changes:",changes)
+    local_changes= repo.is_dirty()
+    print("local changes:",local_changes)
 
     # Check if the current head commit was authored in the last week
     head_commit = repo.head.commit
